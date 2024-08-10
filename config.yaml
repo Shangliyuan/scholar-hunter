@@ -1,0 +1,27 @@
+# Webdriver settings
+webdriver:
+  path: 'D:\chromeCrawl\122.0.6261.69\chromedriver-win64\chromedriver.exe'  # Path to chromedriver executable
+  chrome_binary_path: 'D:\chromeCrawl\122.0.6261.69\chrome-win64\chrome.exe'  # Path to Chrome browser executable
+
+# File paths
+files:
+  input: 'test_data.csv'  # Input file containing scholar information
+  output_initial: 'search_results.csv'  # Output file for initial search results
+  output_details: 'citation_search_results.csv'  # Output file for detailed citation information
+  error_log: 'google_scholar_search_errors.log'  # Log file for error messages
+
+
+# Search settings
+search:
+  max_workers: 10  # Maximum number of concurrent search threads
+  
+# Logging
+logging:
+  level: ERROR  # Logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+  format: '%(asctime)s - %(levelname)s - %(message)s'  # Log message format
+
+# Column names in input CSV
+columns:
+  id: 'id'  # Column name for unique identifier
+  name: 'name'  # Column name for scholar's name
+  organization: 'organization'  # Column name for scholar's organization (optional)
